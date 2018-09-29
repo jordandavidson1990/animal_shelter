@@ -2,9 +2,10 @@ require_relative('../db/sql_runner')
 require('pry')
 
 class Owner
-
-  attr_reader :id
+  
   attr_accessor :name
+  attr_reader :id
+
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -21,11 +22,13 @@ class Owner
   end
 
   def pets
-  sql = "SELECT p.* FROM pets v INNER JOIN adoptions a ON a.pet_id = p.id WHERE a.owner_id = $1;"
-  values = [@id]
-  results = SqlRunner.run(sql, values)
-  return results.map { |pet| Pet.new(pet) }
-end
+    sql = "SELECT p.* FROM pets p INNER JOIN
+    adoptions a ON a.pet_id = p.id WHERE
+    a.owner_id = $1;"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |pet| Pet.new(pet) }
+  end
 
   def self.all()
     sql = "SELECT * FROM owners"
@@ -60,11 +63,11 @@ end
   end
 
   def self.find(id)
-  sql = "SELECT * FROM owners WHERE id = $1"
-  values = [id]
-  owner = SqlRunner.run(sql,values).first
-  result = Owner.new(owner)
-  return result
-end
+    sql = "SELECT * FROM owners WHERE id = $1"
+    values = [id]
+    owner = SqlRunner.run(sql,values).first
+    result = Owner.new(owner)
+    return result
+  end
 
 end
