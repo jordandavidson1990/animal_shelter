@@ -6,5 +6,5 @@ also_reload( '../models/*' )
 
 get "/pets" do
   @pets = Pet.all()
-  erb(:index)
+  erb(:"pets/index")
 end
