@@ -58,6 +58,13 @@ def delete()
   SqlRunner.run(sql,values)
 end
 
+def owners()
+  sql = "SELECT p.* FROM pets p INNER JOIN adoptions a ON a.owner_id = o.id WHERE a.owner_id = $1;"
+  values = [@id]
+  results = SqlRunner.run(sql, values)
+  return results.map { |owner| Owner.new(owner) }
+end
+
   # def available
   #   if pet in @pets
   #     pet.availability == true

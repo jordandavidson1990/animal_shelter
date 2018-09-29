@@ -20,6 +20,13 @@ class Owner
     @id = result.first['id'].to_i
   end
 
+  def pets
+  sql = "SELECT p.* FROM pets v INNER JOIN adoptions a ON a.pet_id = p.id WHERE a.owner_id = $1;"
+  values = [@id]
+  results = SqlRunner.run(sql, values)
+  return results.map { |pet| Pet.new(pet) }
+end
+
   def self.all()
     sql = "SELECT * FROM owners"
     results = SqlRunner.run( sql )

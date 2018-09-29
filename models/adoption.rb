@@ -27,6 +27,22 @@ class Adoption
     return results.map{|adoption|Adoption.new(adoption)}
   end
 
+  def pet()
+  sql = "SELECT * FROM pets
+  WHERE id = $1"
+  values = [@pet_id]
+  results = SqlRunner.run( sql, values )
+  return Pet.new( results.first )
+end
+
+def owner()
+  sql = "SELECT * FROM owners
+  WHERE id = $1"
+  values = [@owner_id]
+  results = SqlRunner.run( sql, values )
+  return Owner.new( results.first )
+end
+
   def self.delete_all()
     sql = "DELETE FROM adoptions"
     SqlRunner.run(sql)
