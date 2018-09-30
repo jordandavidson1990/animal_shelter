@@ -8,6 +8,7 @@
     <th>Type</th>
     <th>Breed</th>
     <th>Admission Date</th>
+    <th>Status</th>
   </tr>
   <% for pet in @pets %>
   <tr>
@@ -17,6 +18,11 @@
     <td><%= pet.type %></td>
     <td><%= pet.breed %></td>
     <td><%= pet.admission_date %></td>
+    <td><%= pet.status%></td>
   </tr>
   <% end %>
 </table>
+
+<form method="get" action="/pets/new">
+ <input type="submit" value="Add Pet"/>
+</form>

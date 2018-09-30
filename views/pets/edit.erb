@@ -1,0 +1,34 @@
+<form method="post" action="/pets/<%=@pet.id%>/edit">
+  <label for="pet-name">Name:</label>
+  <input id="pet-name" type="text" name="name" value= "<%=@pet.name%>"/>
+
+  <label for="pet-age">Age:</label>
+  <input id="pet-age" type="number" name="age" value="<%= @pet.age %>"></input>
+
+  <label for="pet-type">Type:</label>
+  <input id="pet-type" type="text" name="type"
+  value= "<%=@pet.type%>"/>
+
+  <label for="pet-breed">Breed:</label>
+  <input id="pet-breed" type="text" name="breed"
+  value= "<%=@pet.type%>"/>
+
+  <label for="pet-admission_date">Admission Date:</label>
+  <input id="pet-admission_date" type="text" name="admission_date"
+  value= "<%=@pet.admission_date%>"/>
+
+  <label for="pet-status">Status:</label>
+  <select id="pet-status" name="status">
+    <option value="Available"
+    <%="selected" if @pet.status == "Available"%> >
+    Available
+  </option>
+  <option value="Unavailable"
+  <%="selected" if @pet.status == "Unavailable"%> >
+  Unavailable
+</option>
+</select>
+
+
+<input type="submit" value="Save Changes"/>
+</form>

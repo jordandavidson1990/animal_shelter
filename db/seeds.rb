@@ -12,7 +12,8 @@ pet1 = Pet.new({
     "age" => 4,
     "type" => "Dog",
     "breed" => "Jack Russel",
-    "admission_date" => "25/10/2014"})
+    "admission_date" => "25/10/2014",
+    "status" => "Available"})
 pet1.save()
 
 pet2 = Pet.new({
@@ -20,7 +21,8 @@ pet2 = Pet.new({
     "age" => 6,
     "type" => "Dog",
     "breed" => "German Shephard",
-    "admission_date" => "11/09/2015"})
+    "admission_date" => "11/09/2015",
+    "status" => "Unavailable"})
 pet2.save()
 
 pet3 = Pet.new({
@@ -28,7 +30,8 @@ pet3 = Pet.new({
     "age" => 2,
     "type" => "Pup",
     "breed" => "Greyhound",
-    "admission_date" => "12/07/2018"})
+    "admission_date" => "12/07/2018",
+    "status" => "Available"})
 pet3.save()
 
 owner1 = Owner.new({"name" => "Tegan"})

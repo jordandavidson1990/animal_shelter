@@ -9,7 +9,36 @@ get "/pets" do
   erb(:"pets/index")
 end
 
+get "/pets/new" do
+  @adoptions = Adoption.all()
+  erb(:"pets/new")
+end
+
+post "/pets" do
+  @pet = Pet.new(params)
+  @pet.save()
+  erb(:"pets/create")
+end
+
 get '/pets/:id' do
   @pet = Pet.find(params['id'].to_i)
   erb(:"pets/show")
+end
+
+get '/pets/:id/edit' do
+  @adoptions = Adoption.all()
+  @pet = Pet.find(params[:id])
+  erb(:"pets/edit")
+end
+
+post "/pets/:id/edit" do
+  @pet = Pet.new(params)
+  @pet.update()
+  erb(:"pets/update")
+end
+
+post "/pets/:id/delete" do
+  @pet = Pet.find(params['id'].to_i)
+  @pet.delete()
+  erb(:"pets/delete")
 end

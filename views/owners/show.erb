@@ -5,5 +5,6 @@
 <ul>
   <% @owner.pets.each do |pet|%>
   <li><%= pet.name%></li>
+  <a href="/pets/<%= pet.id %>">
   <% end %>
 </ul>

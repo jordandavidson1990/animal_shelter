@@ -16,7 +16,8 @@ CREATE TABLE pets
   age INT2,
   type VARCHAR(255),
   breed VARCHAR(255),
-  admission_date VARCHAR(255)
+  admission_date VARCHAR(255),
+  status VARCHAR(255)
 );
 
 CREATE TABLE adoptions
