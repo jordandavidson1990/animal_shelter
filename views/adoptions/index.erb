@@ -8,9 +8,13 @@
   </tr>
     <% for adoption in @adoptions %>
 <tr>
-  <td><%=
+  <td><a href="/adoptions/<%= adoption.id %>"><%=
   adoption.owner.name %> adopted <%= adoption.pet.name
   %></a></td>
 </tr>
 <% end %>
 </table>
+
+<form method="get" action="/adoptions/new">
+ <input type="submit" value="New Adoption"/>
+</form>

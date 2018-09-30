@@ -11,7 +11,24 @@ get '/adoptions' do
   erb (:"adoptions/index")
 end
 
-# get '/owners/:id' do
-#   @owner = Owner.find(params['id'].to_i)
-#   erb(:"owners/show")
+get "/adoptions/new" do
+  @owners = Owner.all
+  @pets = Pet.all
+  erb(:"adoptions/new")
+end
+
+post "/adoptions" do
+  @adoption = Adoption.new(params)
+  @adoption.save()
+  redirect to("/adoptions")
+end
+
+get '/adoptions/:id' do
+  @adoption = Adoption.find(params['id'].to_i)
+  erb(:"adoptions/show")
+end
+
+# get '/adoptions/:id/new' do
+#   @adoptions = Adoption.all()
+#   erb(:"adoptions/new")
 # end

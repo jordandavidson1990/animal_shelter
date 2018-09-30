@@ -1,0 +1,24 @@
+<form method="post" action="/owners">
+
+  <label for="customer-select">
+    Select a Customer:
+    <select id="customer-select" name="owner_id">
+      <% for owner in @owners %>
+      <option value="<%= owner.id %>">
+        <%= owner.name %>
+      </option>
+      <% end %>
+    </select>
+  </label>
+
+  <label for= "pet-select">
+    Select a Pet:
+    <select id="pet-select" name="pet_id">
+      <% for pet in @pets %>
+      <option value="<%= pet.id">
+        <%= pet.name %>
+      </option>
+      <%end%>
+    </select>
+  </label>
+</form>
