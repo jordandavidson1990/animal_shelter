@@ -1,6 +1,7 @@
 <form method="post" action="/pets/<%=@pet.id%>/edit">
   <label for="pet-name">Name:</label>
-  <input id="pet-name" type="text" name="name" value= "<%=@pet.name%>"/>
+  <input id="pet-name" type="text" name="name"
+  value= "<%=@pet.name%>"/>
 
   <label for="pet-age">Age:</label>
   <input id="pet-age" type="number" name="age" value="<%= @pet.age %>"></input>

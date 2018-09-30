@@ -45,29 +45,23 @@ class Pet
   end
 
   def update()
-  sql = "UPDATE pets SET (name, age, type, breed, admission_date, status) = ($1, $2, $3, $4, $5, $6) WHERE id = $7"
-  values = [@name, @age, @type, @breed, @admission_date, @status, @id]
-  SqlRunner.run(sql,values)
-end
+    sql = "UPDATE pets SET (name, age, type, breed, admission_date, status) = ($1, $2, $3, $4, $5, $6) WHERE id = $7"
+    values = [@name, @age, @type, @breed, @admission_date, @status, @id]
+    SqlRunner.run(sql,values)
+  end
 
-def delete()
-  sql = "DELETE FROM pets WHERE id = $1"
-  values = [@id]
-  SqlRunner.run(sql,values)
-end
+  def delete()
+    sql = "DELETE FROM pets WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql,values)
+  end
 
-def owners()
-  sql = "SELECT o.* FROM owners o INNER JOIN adoptions a ON a.owner_id = o.id WHERE
-  a.pet_id = $1;"
-  values = [@id]
-  results = SqlRunner.run(sql, values)
-  return results.map { |owner| Owner.new(owner) }
-end
-  #
-  # def available
-  #   if pet in @pets
-  #     pet.status ==
-  #     return pet
-  #   end
-  # end
+  def owners()
+    sql = "SELECT o.* FROM owners o INNER JOIN adoptions a ON a.owner_id = o.id WHERE
+    a.pet_id = $1;"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |owner| Owner.new(owner) }
+  end
+
 end

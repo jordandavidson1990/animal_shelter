@@ -9,7 +9,11 @@
   <% for owner in @owners %>
   <tr>
     <td><a href="/owners/<%= owner.id %>"><%= owner.name %></a></td>
-    
+
   </tr>
   <% end %>
 </table>
+
+<form method="get" action="/owners/new">
+ <input type="submit" value="Add Owner"/>
+</form>

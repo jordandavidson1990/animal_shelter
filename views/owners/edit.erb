@@ -1,0 +1,8 @@
+<form method="post" action="/owners/<%=@owner.id%>/edit">
+  <label for="owner-name">Name:</label>
+  <input id="owner-name" type="text" name="name"
+  value= "<%=@owner.name%>"
+ />
+
+  <input type="submit" value="Edit"/>
+</form>

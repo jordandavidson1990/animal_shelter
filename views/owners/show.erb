@@ -8,3 +8,11 @@
   <a href="/pets/<%= pet.id %>">
   <% end %>
 </ul>
+
+<form method="post" action="/owners/<%= @owner.id %>/delete">
+ <input type="submit" value="Remove Owner"/>
+</form>
+
+<form method="get" action="/owners/<%= @owner.id %>/edit">
+ <input type="submit" value="Edit Owner's Records"/>
+</form>
