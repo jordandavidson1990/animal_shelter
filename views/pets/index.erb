@@ -54,3 +54,16 @@ method="get" action="/pets/new">
   </select>
   <input type="submit" value="Type">
 </form>
+
+<form method="post" action="/pets/status_search">
+<label for= "status-select">
+  Find a Friend By Status:</label>
+  <select id="status-select" name="status">
+    <% for pet in @distinct_status %>
+    <option value="<%= pet.status %>">
+      <%= pet.status %>
+    </option>
+    <%end%>
+  </select>
+  <input type="submit" value="Status">
+</form>

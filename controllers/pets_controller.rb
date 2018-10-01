@@ -8,6 +8,7 @@ get "/pets" do
   @pets = Pet.all()
   @distinct_type = Pet.distinct_type()
   @distinct_breed = Pet.distinct_breed()
+  @distinct_status = Pet.distinct_status()
   erb(:"pets/index")
 end
 
@@ -40,6 +41,16 @@ end
 post "/pets/type_search" do
   @pets = Pet.find_by_type(params['type'])
   erb (:"pets/type_search")
+end
+
+get "/pets/status_search" do
+  @pets = Pet.find_by_status(params['status'])
+  erb(:"pets/status_search")
+end
+
+post "/pets/status_search" do
+  @pets = Pet.find_by_status(params['status'])
+  erb(:"pets/status_search")
 end
 
 get '/pets/:id' do

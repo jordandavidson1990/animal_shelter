@@ -53,7 +53,6 @@ class Pet
     return results.map { |pets| Pet.new( pets ) }
   end
 
-
   def self.find_by_type(type)
     sql = "SELECT * FROM pets
     WHERE type = $1"
@@ -64,6 +63,20 @@ class Pet
 
   def self.distinct_type()
     sql = "SELECT DISTINCT type FROM pets"
+    results = SqlRunner.run( sql )
+    return results.map { |pets| Pet.new( pets ) }
+  end
+
+  def self.find_by_status(status)
+    sql = "SELECT * FROM pets
+    WHERE status = $1"
+    values = [status]
+    results = SqlRunner.run(sql, values)
+    return results.map { |pets| Pet.new( pets ) }
+  end
+
+  def self.distinct_status()
+    sql = "SELECT DISTINCT status FROM pets"
     results = SqlRunner.run( sql )
     return results.map { |pets| Pet.new( pets ) }
   end
