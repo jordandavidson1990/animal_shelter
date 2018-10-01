@@ -50,6 +50,12 @@ class Pet
     SqlRunner.run(sql,values)
   end
 
+  def self.status_available
+    sql = "SELECT * FROM pets WHERE status = 'Looking for a New Home'"
+    results = SqlRunner.run( sql )
+    return results.map { |pets| Pet.new( pets ) }
+  end
+  
   def delete()
     sql = "DELETE FROM pets WHERE id = $1"
     values = [@id]

@@ -1,4 +1,4 @@
-<form method="post" action="/owners">
+<form method="post" action="/adoptions">
 
   <label for="customer-select">
     Select a Customer:
@@ -15,10 +15,12 @@
     Select a Pet:
     <select id="pet-select" name="pet_id">
       <% for pet in @pets %>
-      <option value="<%= pet.id">
+      <option value="<%= pet.id %>">
         <%= pet.name %>
       </option>
       <%end%>
     </select>
   </label>
+
+<input type="submit" value="Finalise Adoption"/>
 </form>

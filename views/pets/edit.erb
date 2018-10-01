@@ -20,13 +20,17 @@
 
   <label for="pet-status">Status:</label>
   <select id="pet-status" name="status">
-    <option value="Available"
-    <%="selected" if @pet.status == "Available"%> >
-    Available
+    <option value="Looking for a New Home"
+    <%="selected" if @pet.status == "Looking for a New Home"%> >
+    Looking for a New Home
   </option>
-  <option value="Unavailable"
-  <%="selected" if @pet.status == "Unavailable"%> >
-  Unavailable
+  <option value="Still in Training"
+  <%="selected" if @pet.status == "Still in Training"%> >
+  Still in Training
+</option>
+<option value="Happily Adopted"
+<%="selected" if @pet.status == "Happily Adopted"%> >
+Happily Adopted
 </option>
 </select>
 
