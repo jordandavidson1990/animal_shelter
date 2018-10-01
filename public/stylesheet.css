@@ -12,6 +12,15 @@ h6{
   font-family: 'Playfair Display', serif;
 }
 
-body,
-p
-{font-family: 'Open Sans', sans-serif;}
+body
+{font-family: 'Open Sans', sans-serif;
+background-color: #2e303e;
+color: beige;}
+
+a {
+    color: beige;}
+    
+a:hover,
+a:focus{
+  color: #adada0
+}
