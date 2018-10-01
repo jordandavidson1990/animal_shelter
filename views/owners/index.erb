@@ -1,19 +1,28 @@
-<h1>Customers</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
+      <h1>Customers.</h1>
 
-  </tr>
-  <% for owner in @owners %>
-  <tr>
-    <td><a href="/owners/<%= owner.id %>"><%= owner.name %></a></td>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th></th>
 
-  </tr>
-  <% end %>
-</table>
 
-<form method="get" action="/owners/new">
- <input type="submit" value="Add Customer"/>
-</form>
+        </tr>
+        <% for owner in @owners %>
+        <tr>
+          <td><a href="/owners/<%= owner.id %>"><%= owner.name %></a></td>
+
+        </tr>
+        <% end %>
+      </table>
+
+      <form method="get" action="/owners/new">
+        <input type="submit" value="Add Customer"/>
+      </form>
+
+    </div>
+  </div>
+</div>

@@ -1,69 +1,107 @@
-<h1>Pets</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h1 class="mb-3">Pets.</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th>Age</th>
-    <th>Type</th>
-    <th>Breed</th>
-    <th>Admission Date</th>
-    <th>Status</th>
-  </tr>
-  <% for pet in @pets %>
-  <tr>
-    <td><a href="/pets/<%= pet.id %>"><%= pet.name %></a></td>
-    <td>|</td>
-    <td><%= pet.age %></td>
-    <td><%= pet.type %></td>
-    <td><%= pet.breed %></td>
-    <td><%= pet.admission_date %></td>
-    <td><%= pet.status%></td>
-  </tr>
-  <% end %>
-</table>
+      <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Type</th>
+            <th>Breed</th>
+            <th>Admission Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for pet in @pets %>
+          <tr>
+            <td><a href="/pets/<%= pet.id %>"><%= pet.name %></a></td>
+            <td><%= pet.age %></td>
+            <td><%= pet.type %></td>
+            <td><%= pet.breed %></td>
+            <td><%= pet.admission_date %></td>
+            <td><%= pet.status%></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-<form
-method="get" action="/pets/new">
-  <input type="submit" value="Add Pet"/>
+  <div class="row mt-5">
+    <div class="col-sm">
 
-</form>
+      <form
+      method="get" action="/pets/new">
+      <div class="form-group">
+        <input class="btn btn-primary btn-block" type="submit" value="Add Pet"/>
+      </div>
+    </form>
+  </div>
+</div>
 
-<form method="post" action="/pets/search">
-<label for= "breed-select">
-  Find a Breed:</label>
-  <select id="breed-select" name="breed">
-    <% for pet in @distinct_breed %>
-    <option value="<%= pet.breed %>">
-      <%= pet.breed %>
-    </option>
-    <%end%>
-  </select>
-  <input type="submit" value="Breed">
-</form>
+<div class="row mt-5">
 
-<form method="post" action="/pets/type_search">
-<label for= "type-select">
-  Find a Type:</label>
-  <select id="type-select" name="type">
-    <% for pet in @distinct_type %>
-    <option value="<%= pet.type %>">
-      <%= pet.type %>
-    </option>
-    <%end%>
-  </select>
-  <input type="submit" value="Type">
-</form>
+  <div class="col-sm">
+    <form method="post" action="/pets/search">
+      <div class="form-group">
+        <label for= "breed-select">
+          Find a Breed:</label>
+          <select class="form-control"
+          id="breed-select" name="breed">
+          <% for pet in @distinct_breed %>
+          <option value="<%= pet.breed %>">
+            <%= pet.breed %>
+          </option>
+          <%end%>
+        </select>
+      </div>
+      <div class="form-group">
+        <input class="btn btn-secondary btn-block" type="submit" value="Breed">
+      </div>
+    </form>
+  </div>
 
-<form method="post" action="/pets/status_search">
-<label for= "status-select">
-  Find a Friend By Status:</label>
-  <select id="status-select" name="status">
-    <% for pet in @distinct_status %>
-    <option value="<%= pet.status %>">
-      <%= pet.status %>
-    </option>
-    <%end%>
-  </select>
-  <input type="submit" value="Status">
-</form>
+  <div class="col-sm">
+    <form method="post" action="/pets/type_search">
+      <div class="form-group">
+        <label for= "type-select">
+          Find a Type:</label>
+          <select class="form-control"
+          id="type-select" name="type">
+          <% for pet in @distinct_type %>
+          <option value="<%= pet.type %>">
+            <%= pet.type %>
+          </option>
+          <%end%>
+        </select>
+      </div>
+      <div class="form-group">
+        <input class="btn btn-secondary btn-block" type="submit" value="Type">
+      </div>
+    </form>
+  </div>
+
+  <div class="col-sm">
+    <form method="post" action="/pets/status_search">
+      <div class="form-group">
+        <label for= "status-select">
+          Find a Friend By Status:</label>
+          <select class="form-control"
+          id="status-select" name="status">
+          <% for pet in @distinct_status %>
+          <option value="<%= pet.status %>">
+            <%= pet.status %>
+          </option>
+          <%end%>
+        </select>
+      </div>
+      <div class="form-group">
+        <input class="btn btn-secondary btn-block" type="submit" value="Status">
+      </div>
+    </form>
+  </div>
+</div>
+</div>

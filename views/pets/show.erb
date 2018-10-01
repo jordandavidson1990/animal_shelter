@@ -1,15 +1,17 @@
-<p>Name: <%= @pet.name %></p>
-<p>Age: <%= @pet.age %></p>
-<p>Type: <%= @pet.type %></p>
-<p>Breed: <%= @pet.breed %></p>
-<p>Admission Date: <%= @pet.admission_date %></p>
-<p>Status: <%= @pet.status %></p>
-<br>
+<table class="table table-bordered">
+  <p>Name: <%= @pet.name %></p>
+  <p>Age: <%= @pet.age %></p>
+  <p>Type: <%= @pet.type %></p>
+  <p>Breed: <%= @pet.breed %></p>
+  <p>Admission Date: <%= @pet.admission_date %></p>
+  <p>Status: <%= @pet.status %></p>
+  <br>
+  <img src="..." alt="..." class="img-thumbnail">
 
-<form method="post" action="/pets/<%= @pet.id %>/delete">
- <input type="submit" value="Remove Friend"/>
-</form>
+  <form method="post" action="/pets/<%= @pet.id %>/delete">
+    <input type="submit" value="Remove Friend"/>
+  </form>
 
-<form method="get" action="/pets/<%= @pet.id %>/edit">
- <input type="submit" value="Edit Little Buddy's Records"/>
-</form>
+  <form method="get" action="/pets/<%= @pet.id %>/edit">
+    <input type="submit" value="Edit Little Buddy's Records"/>
+  </form>
