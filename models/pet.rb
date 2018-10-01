@@ -59,7 +59,7 @@ class Pet
     WHERE type = $1"
     values = [type]
     results = SqlRunner.run(sql, values)
-    return Pet.new(results.first)
+    return results.map { |pets| Pet.new( pets ) }
   end
 
   def self.distinct_type()
@@ -85,9 +85,6 @@ class Pet
     results = SqlRunner.run( sql )
     return results.map { |pets| Pet.new( pets ) }
   end
-
-  # def self.update_status
-  #   sql = "UPDATE pets.status WHERE "
 
   def delete()
     sql = "DELETE FROM pets WHERE id = $1"
