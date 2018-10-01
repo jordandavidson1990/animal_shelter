@@ -38,6 +38,8 @@ end
 #
 # post "/adoptions/:id/delete" do
 #   @adoption = Adoption.find(params['id'].to_i)
+#   @pet = @adoption.pet
+#   @adoption.
 #   @adoption.delete()
 #   erb(:"adoption/delete")
 # end

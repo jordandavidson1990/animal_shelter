@@ -52,7 +52,7 @@ class Adoption
 
   def self.find(id)
     sql ="SELECT * FROM adoptions where
-    id =$1"
+    id = $1"
     values =[id]
     results = SqlRunner.run(sql, values)
     return Adoption.new(results.first)

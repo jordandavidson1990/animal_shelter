@@ -26,3 +26,29 @@
 <form method="get" action="/pets/new">
  <input type="submit" value="Add Pet"/>
 </form>
+
+<form method="post" action="/pets"
+<label for= "type-select">
+  Find a Type:
+  <select id="type-select" name="type_id">
+    <% for pet in @pets %>
+    <option value="<%= pet.id %>">
+      <%= pet.type %>
+    </option>
+    <%end%>
+  </select>
+  <input type="submit" name="type_id" value="Find">
+</label>
+</form>
+
+<label for= "breed-select">
+  Find a Breed:
+  <select id="breed-select" name="breed_id">
+    <% for pet in @pets %>
+    <option value="<%= pet.id %>">
+      <%= pet.breed %>
+    </option>
+    <%end%>
+    <input type="submit" name="type_id" value="Find">
+  </select>
+</label>

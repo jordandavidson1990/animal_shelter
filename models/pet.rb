@@ -39,6 +39,22 @@ class Pet
     return Pet.new( results.first )
   end
 
+  def self.find_by_breed(breed)
+    sql = "SELECT * FROM pets
+    WHERE breed = $1"
+    values = [breed]
+    results = SqlRunner.run(sql, values)
+    return Pet.new(results.first)
+  end
+
+  def self.find_by_type(type)
+    sql = "SELECT * FROM pets
+    WHERE type = $1"
+    values = [type]
+    results = SqlRunner.run(sql, values)
+    return Pet.new(results.first)
+  end
+
   def self.delete_all
     sql = "DELETE FROM pets"
     SqlRunner.run( sql )
@@ -51,11 +67,15 @@ class Pet
   end
 
   def self.status_available
-    sql = "SELECT * FROM pets WHERE status = 'Looking for a New Home'"
+    sql = "SELECT * FROM pets WHERE status = $1"
+    values = ['Looking for a New Home']
     results = SqlRunner.run( sql )
     return results.map { |pets| Pet.new( pets ) }
   end
-  
+
+  # def self.update_status
+  #   sql = "UPDATE pets.status WHERE "
+
   def delete()
     sql = "DELETE FROM pets WHERE id = $1"
     values = [@id]

@@ -17,6 +17,8 @@ end
 post "/pets" do
   @pet = Pet.new(params)
   @pet.save()
+  pet = Pet.find_by_type(params['type_id'])
+  pet.save()
   erb(:"pets/create")
 end
 
