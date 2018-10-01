@@ -1,39 +1,66 @@
-<form method="post" action="/pets/<%=@pet.id%>/edit">
-  <label for="pet-name">Name:</label>
-  <input id="pet-name" type="text" name="name"
-  value= "<%=@pet.name%>"/>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <form method="post" action="/pets/<%=@pet.id%>/edit">
 
-  <label for="pet-age">Age:</label>
-  <input id="pet-age" type="number" name="age" value="<%= @pet.age %>"></input>
+        <div class="form-group">
+          <label for="pet-name">Name:</label>
+          <input class="form-control"
+          id="pet-name" type="text" name="name"
+          value= "<%=@pet.name%>"/>
+        </div>
 
-  <label for="pet-type">Type:</label>
-  <input id="pet-type" type="text" name="type"
-  value= "<%=@pet.type%>"/>
+        <div class="form-group">
+          <label for="pet-age">Age:</label>
+          <input class="form-control"
+          id="pet-age" type="number" name="age"
+          value="<%= @pet.age %>"></>
+        </div>
 
-  <label for="pet-breed">Breed:</label>
-  <input id="pet-breed" type="text" name="breed"
-  value= "<%=@pet.type%>"/>
+        <div class="form-group">
+          <label for="pet-type">Type:</label>
+          <input class="form-control"
+          id="pet-type" type="text" name="type"
+          value= "<%=@pet.type%>"/>
+        </div>
 
-  <label for="pet-admission_date">Admission Date:</label>
-  <input id="pet-admission_date" type="text" name="admission_date"
-  value= "<%=@pet.admission_date%>"/>
+        <div class="form-group">
+          <label for="pet-breed">Breed:</label>
+          <input class="form-control"
+          id="pet-breed" type="text" name="breed"
+          value= "<%=@pet.type%>"/>
+        </div>
 
-  <label for="pet-status">Status:</label>
-  <select id="pet-status" name="status">
-    <option value="Looking for a New Home"
-    <%="selected" if @pet.status == "Looking for a New Home"%> >
-    Looking for a New Home
-  </option>
-  <option value="Still in Training"
-  <%="selected" if @pet.status == "Still in Training"%> >
-  Still in Training
-</option>
-<option value="Happily Adopted"
-<%="selected" if @pet.status == "Happily Adopted"%> >
-Happily Adopted
-</option>
-</select>
+        <div class="form-group">
+          <label for="pet-admission_date">Admission Date:</label>
+          <input class="form-control"
+          id="pet-admission_date" type="text" name="admission_date"
+          value= "<%=@pet.admission_date%>"/>
+        </div>
 
+        <div class="form-group">
+          <label for="pet-status">Status:</label>
+          <select class="form-control"
+          id="pet-status" name="status">
+          <option value="Looking for a New Home"
+          <%="selected" if @pet.status == "Looking for a New Home"%> >
+          Looking for a New Home
+        </option>
+        <option value="Still in Training"
+        <%="selected" if @pet.status == "Still in Training"%> >
+        Still in Training
+      </option>
+      <option value="Happily Adopted"
+      <%="selected" if @pet.status == "Happily Adopted"%> >
+      Happily Adopted
+    </option>
+  </select>
+</div>
 
-<input type="submit" value="Save Changes"/>
+<div class="form-group">
+  <input class="btn btn-secondary btn-block"type="submit" value="Save Changes"/>
+</div>
 </form>
+</div>
+</div>
+</div>

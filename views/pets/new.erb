@@ -1,31 +1,53 @@
-<form method="post" action="/pets">
-  <label for="pet-name">Name:</label>
-  <input id="pet-name" type="text" name="name"/>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <p>Add Little Buddy.</p>
+      <form method="post" action="/pets">
+        <div class="form-group">
+          <label for="pet-name">Name:</label>
+          <input class="form-control"
+          id="pet-name" type="text" name="name"/>
+        </div>
 
-  <label for="pet-age">Age:</label>
-  <input id="pet-age" type="number" name="age"/>
+        <div class="form-group">
+          <label for="pet-age">Age:</label>
+          <input class="form-control" id="pet-age" type="number" name="age"/>
+        </div>
 
-  <label for="pet-type">Type:</label>
-  <input id="pet-type" type="text" name="type"/>
+        <div class="form-group">
+          <label for="pet-type">Type:</label>
+          <input class="form-control" id="pet-type" type="text" name="type"/>
+        </div>
 
-  <label for="pet-breed">Breed:</label>
-  <input id="pet-breed" type="text" name="breed"/>
+        <div class="form-group">
+          <label for="pet-breed">Breed:</label>
+          <input class="form-control" id="pet-breed" type="text" name="breed"/>
+        </div>
 
-  <label for="pet-admission_date">Admission Date:</label>
-  <input id="pet-admission_date" type="text" name="admission_date"/>
+        <div class="form-group">
+          <label for="pet-admission_date">Admission Date:</label>
+          <input class="form-control" id="pet-admission_date" type="text" name="admission_date"/>
+        </div>
 
-  <label for="pet-status">Status:</label>
-  <select id="pet-status" name="status">
-    <option>
-      Looking for a New Home
-    </option>
-    <option>
-      Still in Training
-    </option>
-    <option>
-      Happily Adopted
-    </option>
-  </select>
+        <div class="form-group">
+          <label for="pet-status">Status:</label>
+          <select class="form-control" id="pet-status" name="status">
+            <option>
+              Looking for a New Home
+            </option>
+            <option>
+              Still in Training
+            </option>
+            <option>
+              Happily Adopted
+            </option>
+          </select>
+        </div>
 
-  <input type="submit" value="Add Pet"/>
-</form>
+        <div class="form-group">
+          <input class="btn btn-secondary btn-block" type="submit" value="Add Pet"/>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
