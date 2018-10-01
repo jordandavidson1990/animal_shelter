@@ -44,8 +44,15 @@ class Pet
     WHERE breed = $1"
     values = [breed]
     results = SqlRunner.run(sql, values)
-    return Pet.new(results.first)
+    return results.map { |pets| Pet.new( pets ) }
   end
+
+  def self.distinct_breed()
+    sql = "SELECT DISTINCT breed FROM pets"
+    results = SqlRunner.run( sql )
+    return results.map { |pets| Pet.new( pets ) }
+  end
+
 
   def self.find_by_type(type)
     sql = "SELECT * FROM pets
@@ -53,6 +60,12 @@ class Pet
     values = [type]
     results = SqlRunner.run(sql, values)
     return Pet.new(results.first)
+  end
+
+  def self.distinct_type()
+    sql = "SELECT DISTINCT type FROM pets"
+    results = SqlRunner.run( sql )
+    return results.map { |pets| Pet.new( pets ) }
   end
 
   def self.delete_all

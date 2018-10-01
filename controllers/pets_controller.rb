@@ -6,6 +6,7 @@ also_reload( '../models/*' )
 
 get "/pets" do
   @pets = Pet.all()
+  @distinct_breed = Pet.distinct_breed()
   erb(:"pets/index")
 end
 
@@ -17,9 +18,17 @@ end
 post "/pets" do
   @pet = Pet.new(params)
   @pet.save()
-  pet = Pet.find_by_type(params['type_id'])
-  pet.save()
   erb(:"pets/create")
+end
+
+get "/pets/breed_search" do
+  @pets = Pet.find_by_breed(params['breed'])
+  erb (:"pets/breed_search")
+end
+
+post "/pets/breed_search" do
+  @pets = Pet.find_by_breed(params['breed'])
+  erb (:"pets/breed_search")
 end
 
 get '/pets/:id' do
