@@ -23,7 +23,13 @@
   <% end %>
 </table>
 
-<form method="post" action="/pets/breed_search">
+<form
+method="get" action="/pets/new">
+  <input type="submit" value="Add Pet"/>
+
+</form>
+
+<form method="post" action="/pets/search">
 <label for= "breed-select">
   Find a Breed:</label>
   <select id="breed-select" name="breed">

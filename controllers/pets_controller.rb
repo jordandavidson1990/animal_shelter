@@ -22,14 +22,14 @@ post "/pets" do
   erb(:"pets/create")
 end
 
-get "/pets/breed_search" do
+get "/pets/search" do
   @pets = Pet.find_by_breed(params['breed'])
-  erb (:"pets/breed_search")
+  erb (:"pets/search")
 end
 
-post "/pets/breed_search" do
+post "/pets/search" do
   @pets = Pet.find_by_breed(params['breed'])
-  erb (:"pets/breed_search")
+  erb (:"pets/search")
 end
 
 get "/pets/type_search" do
