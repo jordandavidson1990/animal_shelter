@@ -95,7 +95,7 @@ class Pet
   def self.status_available
     sql = "SELECT * FROM pets WHERE status = $1"
     values = ['Looking for a New Home']
-    results = SqlRunner.run( sql )
+    results = SqlRunner.run( sql, values )
     return results.map { |pets| Pet.new( pets ) }
   end
 

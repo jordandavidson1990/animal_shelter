@@ -13,7 +13,7 @@ end
 
 get "/adoptions/new" do
   @owners = Owner.all
-  @pets = Pet.status_available
+  @pets = Pet.status_available()
   erb(:"adoptions/new")
 end
 

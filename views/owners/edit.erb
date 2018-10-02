@@ -1,8 +1,20 @@
-<form method="post" action="/owners/<%=@owner.id%>/edit">
-  <label for="owner-name">Name:</label>
-  <input id="owner-name" type="text" name="name"
-  value= "<%=@owner.name%>"
- />
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+          <form method="post" action="/owners/<%=@owner.id%>/edit">
+            <label for="owner-name">Name:</label>
+            <input class="form-control"
+            id="owner-name" type="text" name="name"
+            value= "<%=@owner.name%>"
+            />
 
-  <input type="submit" value="Edit"/>
-</form>
+            <div class="form-group">
+            <input class="btn btn-secondary btn-block"
+            type="submit" value="Edit"/>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>

@@ -7,7 +7,6 @@
       <table>
         <tr>
           <th>Adoptions Completed</th>
-          <th></th>
         </tr>
         <% for adoption in @adoptions %>
         <tr>
@@ -26,7 +25,7 @@
     <div class="col-sm">
 
       <form method="get" action="/adoptions/new">
-        <input type="submit" value="New Adoption"/>
+        <input class="btn btn-secondary btn-block" type="submit" value="New Adoption"/>
       </form>
 
     </div>
