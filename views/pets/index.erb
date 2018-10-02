@@ -27,6 +27,8 @@
           <% end %>
         </tbody>
       </table>
+      <br>
+    </br>
     </div>
   </div>
 
@@ -35,9 +37,9 @@
 
       <form
       method="get" action="/pets/new">
-      <div class="form-group">
+
         <input class="btn btn-secondary btn-block" type="submit" value="Add Pet"/>
-      </div>
+    
     </form>
   </div>
 </div>
@@ -62,7 +64,7 @@
         </select>
 
       <div class="submit-btn">
-        <input class="submit-btn" type="submit" value="Breed">
+        <input class="btn submit-btn" type="submit" value="Breed">
       </div>
     </form>
   </div>
@@ -71,7 +73,6 @@
 
     <div class="single-search">
       <form method="post" action="/pets/type_search">
-
           <label for= "type-select">
             Find a Type:</label>
             <select class="dropdown"
@@ -82,9 +83,8 @@
             </option>
             <%end%>
           </select>
-
         <div class="submit-btn">
-          <input class="submit-btn" type="submit" value="Type">
+          <input class="btn submit-btn" type="submit" value="Type">
         </div>
       </form>
     </div>
@@ -95,7 +95,7 @@
       <form method="post" action="/pets/status_search">
 
           <label for= "status-select">
-            Find a Friend By Status:</label>
+            Find By Status:</label>
             <select class="dropdown"
              name="status">
             <% for pet in @distinct_status %>
@@ -106,7 +106,7 @@
           </select>
 
         <div class="submit-btn">
-          <input class="submit-btn" type="submit" value="Status">
+          <input class="btn submit-btn" type="submit" value="Status">
         </div>
       </form>
     </div>

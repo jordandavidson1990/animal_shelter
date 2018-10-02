@@ -1,46 +1,47 @@
 <div class="container">
   <h1>New Adoption Inbound.</h1>
-  <div class="row mt-5">
-    <div class="col-sm">
-      <form method="post" action="/adoptions">
-        <div class="form-group">
-          <label for="customer-select">
-            Select a Customer:
-          </label>
-          <select class="form-control"
-          id="customer-select" name="owner_id">
-          <% for owner in @owners %>
-          <option value="<%= owner.id %>">
-            <%= owner.name %>
-          </option>
-          <% end %>
-        </select>
-      </div>
-    </div>
 
-    <div class="col-sm">
-      <label for= "pet-select">
-        Select a Pet:
-        <select class="form-control"
-        id="pet-select" name="pet_id">
-        <% for pet in @pets %>
-        <option value="<%= pet.id %>">
-          <%= pet.name %>
-        </option>
-        <%end%>
-      </select>
-    </label>
+  <form method="post" action="/adoptions">
+
+    <div class="form-group">
+      <label for="customer-select">
+        Select a Customer:
+      </label>
+      <select class="form-control"
+      id="customer-select" name="owner_id">
+      <% for owner in @owners %>
+      <option value="<%= owner.id %>">
+        <%= owner.name %>
+      </option>
+      <% end %>
+    </select>
   </div>
 
-  <div class="col-sm">
-    <label for="year-adopted">
-      Year Adopted:
-      <input class="form-control"
-      id="year-adopted" name="year_adopted"
-      type="number" min="1967" max="2018">
-    </label>
-  </div>
   <div class="form-group">
+    <label for= "pet-select">
+      Select a Pet:
+    </label>
+    <select class="form-control"
+    id="pet-select" name="pet_id">
+    <% for pet in @pets %>
+    <option value="<%= pet.id %>">
+      <%= pet.name %>
+    </option>
+    <%end%>
+  </select>
+</label>
+</div>
+
+<div class="form-group">
+  <label for="year-adopted">
+    Year Adopted:
+  </label>
+  <input class="form-control"
+  id="year-adopted" name="year_adopted"
+  type="number" min="1967" max="2018">
+</label>
+</div>
+<div class="form-group">
   <input class="btn btn-secondary btn-block" type="submit" value="Finalise Adoption"/>
 </form>
 </div>

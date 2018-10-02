@@ -1,6 +1,13 @@
-<form method="post" action="/owners">
-  <label for="owner-name">Name:</label>
-  <input id="owner-name" type="text" name="name"/>
+<div class="container">
 
-  <input class="btn btn-secondary btn-block" type="submit" value="Add Customer"/>
+<h1>Add Potential Owner.</h1>
+
+<form method="post" action="/owners">
+  <div class="form-group">
+    <label for="owner-name">Name:</label>
+    <input class="form-control" id="owner-name" type="text" name="name"/>
+  </div>
+
+  <input class="btn" type="submit" value="Add Customer"/>
 </form>
+</div>

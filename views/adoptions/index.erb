@@ -1,33 +1,26 @@
 <div class="container">
-  <div class="row">
-    <div class="col-sm">
       <h1>Adoptions.</h1>
 
 
-      <table>
+      <table class="customer-table">
         <tr>
           <th>Adoptions Completed</th>
         </tr>
         <% for adoption in @adoptions %>
         <tr>
-          <td><a href="/adoptions/<%= adoption.id %>"><%=
+          <td><a class="text-align"
+            href="/adoptions/<%= adoption.id %>"><%=
           adoption.owner.name %> adopted <%= adoption.pet.name
           %></a></td>
         </tr>
         <% end %>
       </table>
-    </div>
-  </div>
-</div>
+      <br>
+    </br>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
 
       <form method="get" action="/adoptions/new">
         <input class="btn btn-secondary btn-block" type="submit" value="New Adoption"/>
       </form>
 
     </div>
-  </div>
-</div>

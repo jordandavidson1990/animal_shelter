@@ -1,33 +1,27 @@
 <div class="container">
-  <!-- <div class="row justify-content-center">
-    <div class="col-6"> -->
 
-      <div class="container"><h1>Name: <%= @pet.name %></h1></div>
-      <div class="container"><h2>Age: <%= @pet.age %></h2></div>
-      <div class="container"><h2>Type: <%= @pet.type %></h2></div>
-      <div class="container"><h2>Breed: <%= @pet.breed %></h2></div>
-      <div class="container"><h2>Admission Date: <%= @pet.admission_date %></h2></div>
-      <div class="container"><h2>Status: <%= @pet.status %></h2></div>
-      <br>
+  <h1>Name: <%= @pet.name %></h1>
+  <div class="container"><h2>Age: <%= @pet.age %></h2></div>
+  <div class="container"><h2>Type: <%= @pet.type %></h2></div>
+  <div class="container"><h2>Breed: <%= @pet.breed %></h2></div>
+  <div class="container"><h2>Admission Date: <%= @pet.admission_date %></h2></div>
+  <div class="container"><h2>Status: <%= @pet.status %></h2></div>
+  <br>
 
 
-        <div class="col-sm">
-          <form method="post" action="/pets/<%= @pet.id %>/delete">
-            <div class="form-group">
-              <input class="btn btn-secondary btn-block"type="submit" value="Remove <%= @pet.name %>"/>
-            </div>
-          </form>
-        </form>
 
-
-          <form method="get" action="/pets/<%= @pet.id %>/edit">
-            <div class="form-group">
-              <input class="btn btn-secondary
-              btn-block" type="submit" value="Edit Little <%= @pet.name %>'s Records"/>
-            </form>
-          </div>
+    <form method="post" action="/pets/<%= @pet.id %>/delete">
+      <div class="form-group">
+        <input class="btn btn-secondary btn-block"type="submit" value="Remove <%= @pet.name %>"/>
       </div>
-    </div>
+    </form>
+
+
+
+  <form method="get" action="/pets/<%= @pet.id %>/edit">
+    <div class="form-group">
+      <input class="btn btn-secondary
+      btn-block" type="submit" value="Edit Little <%= @pet.name %>'s Records"/>
+    </form>
   </div>
-</div>
 </div>
