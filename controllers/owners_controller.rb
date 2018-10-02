@@ -38,7 +38,7 @@ post "/owners/:id/edit" do
 end
 
 post "/owners/:id/delete" do
-  owner = Owner.find(params['id'].to_i)
-  owner.delete()
+  @owner = Owner.find(params['id'].to_i)
+  @owner.delete()
   erb(:"owners/delete")
 end

@@ -19,7 +19,7 @@ end
 
 post "/adoptions" do
   adoption = Adoption.new(params)
-  pet = Pet.find(params['pet_id'])
+  pet = Pet.find(params['pet_id'].to_i)
   pet.status = "Happily Adopted"
   pet.update()
   adoption.save()

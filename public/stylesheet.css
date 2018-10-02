@@ -2,6 +2,10 @@ nav > ul {
   display: flex;
   justify-content: space-between;
   height: 100%;
+  overflow: hidden;
+}
+li {
+    display: inline;
 }
 
 nav{
@@ -10,20 +14,17 @@ nav{
   margin-bottom: 0;
   list-style: none;
 }
+.active {
+    background-color: #353a37;
+}
 
-.col-sm
-{flex-basis: 0;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  max-width: 100%;}
 
-  .py-padding-top: 1.5rem
 
-  .form-group {
-    margin-bottom: 1rem;
-  }
 
-  .mt-5 {margin-top: 3rem}
+
+
+
+
   .img-thumbnail {
     padding: .25rem;
     background-color: beige;
@@ -40,6 +41,9 @@ nav{
   h5,
   h6{
     font-family: 'Playfair Display', serif;
+  }
+  h1 {
+      font-size: 40px;
   }
 
   body
@@ -70,6 +74,7 @@ nav{
       border: 2px solid beige;;
     }
     table {
+      justify-content: space-around;
       width: 100%;
       border-collapse: collapse;
     }
@@ -86,7 +91,7 @@ nav{
 
     .btn {
       display: inline-block;
-      font-weight: 400;
+      font-weight: 500;
       text-align: center;
       white-space: nowrap;
       vertical-align: middle;
@@ -95,7 +100,8 @@ nav{
       font-size: 1rem;
       line-height: 1.5;
       border-radius: .25rem;
-      transition: color .15s
+      transition: color .15s;
+      width: 25%;
     }
     .btn-secondary {
       color: #DBCDC6: ;
@@ -125,9 +131,45 @@ nav{
     div {
       display: block;
     }
-    .form-control {
-    display: block;
+
+  .search-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .single-search {
+    width: 200px;
+  }
+
+  .dropdown {
     width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color;
+  }
+
+  .submit-btn {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+
+  }
+
+
+    .form-control {
+
+    width: 25%;
     height: calc(2.25rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -138,3 +180,4 @@ nav{
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color;
+  }

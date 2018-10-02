@@ -3,20 +3,21 @@ require('pry')
 
 class Adoption
 
-  attr_reader :id, :pet_id, :owner_id
+  attr_reader :id, :pet_id, :owner_id, :year_adopted
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @pet_id = options['pet_id']
     @owner_id = options['owner_id']
+    @year_adopted = options['year_adopted'].to_i if options['year_adopted']
   end
 
 
   def save()
     sql = "INSERT INTO adoptions
-    (pet_id, owner_id)
-    values ($1, $2) RETURNING *"
-    values = [@pet_id, @owner_id]
+    (pet_id, owner_id, year_adopted)
+    values ($1, $2, $3) RETURNING *"
+    values = [@pet_id, @owner_id, @year_adopted]
     result = SqlRunner.run(sql, values)
     @id = result.first['id'].to_i
   end

@@ -12,8 +12,8 @@ pet1 = Pet.new({
     "age" => 4,
     "type" => "Dog",
     "breed" => "Jack Russel",
-    "admission_date" => "25/10/2014",
-    "status" => "Happily Adopted"})
+    "admission_date" => "2015",
+    "status" => "Still in Training"})
 pet1.save()
 
 pet2 = Pet.new({
@@ -21,8 +21,8 @@ pet2 = Pet.new({
     "age" => 6,
     "type" => "Dog",
     "breed" => "German Shephard",
-    "admission_date" => "11/09/2015",
-    "status" => "Happily Adopted"})
+    "admission_date" => "2014",
+    "status" => "Looking for a New Home"})
 pet2.save()
 
 pet3 = Pet.new({
@@ -30,8 +30,8 @@ pet3 = Pet.new({
     "age" => 2,
     "type" => "Pup",
     "breed" => "Greyhound",
-    "admission_date" => "12/07/2018",
-    "status" => "Happily Adopted"})
+    "admission_date" => "2018",
+    "status" => "Looking for a New Home"})
 pet3.save()
 
 pet4 = Pet.new({
@@ -39,9 +39,45 @@ pet4 = Pet.new({
     "age" => 8,
     "type" => "Dog",
     "breed" => "Border Collie",
-    "admission_date" => "12/07/2012",
+    "admission_date" => "2012",
     "status" => "Looking for a New Home"})
 pet4.save()
+
+pet5 = Pet.new({
+    "name" => "Miguel",
+    "age" => 3,
+    "type" => "Cat",
+    "breed" => "Persian",
+    "admission_date" => "2016",
+    "status" => "Still in Training"})
+pet5.save()
+
+pet6 = Pet.new({
+    "name" => "Jack",
+    "age" => 12,
+    "type" => "Snake",
+    "breed" => "Rattle",
+    "admission_date" => "2012",
+    "status" => "Looking for a New Home"})
+pet6.save()
+
+pet7 = Pet.new({
+    "name" => "Inigo",
+    "age" => 12,
+    "type" => "Cat",
+    "breed" => "British Shorthair",
+    "admission_date" => "2006",
+    "status" => "Still in Training"})
+pet7.save()
+
+pet8 = Pet.new({
+    "name" => "Dom",
+    "age" => 2,
+    "type" => "Cat",
+    "breed" => "Persian",
+    "admission_date" => "2015",
+    "status" => "Still in Training"})
+pet8.save()
 
 owner1 = Owner.new({"name" => "Tegan"})
 owner1.save
@@ -52,13 +88,13 @@ owner2.save
 owner3 = Owner.new({"name" => "Mya"})
 owner3.save
 
-adoption1 = Adoption.new({"pet_id" => pet1.id, "owner_id" => owner1.id})
+adoption1 = Adoption.new({"pet_id" => pet1.id, "owner_id" => owner1.id, "year_adopted" => "2018"})
 adoption1.save()
 
-adoption2 = Adoption.new({"pet_id" => pet2.id, "owner_id" => owner2.id})
+adoption2 = Adoption.new({"pet_id" => pet2.id, "owner_id" => owner2.id, "year_adopted" => "2018"})
 adoption2.save()
 
-adoption3 = Adoption.new({"pet_id" => pet3.id, "owner_id" => owner3.id})
+adoption3 = Adoption.new({"pet_id" => pet3.id, "owner_id" => owner3.id, "year_adopted" => "2018"})
 adoption3.save()
 
 # adoption1.delete()
