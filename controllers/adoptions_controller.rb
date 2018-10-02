@@ -35,11 +35,9 @@ get '/adoptions/:id/new' do
   @adoptions = Adoption.all()
   erb(:"adoptions/new")
 end
-#
-# post "/adoptions/:id/delete" do
-#   @adoption = Adoption.find(params['id'].to_i)
-#   @pet = @adoption.pet
-#   @adoption.
-#   @adoption.delete()
-#   erb(:"adoption/delete")
-# end
+
+post "/adoptions/:id/delete" do
+  @adoption = Adoption.find(params['id'].to_i)
+  @adoption.delete()
+  erb(:"adoptions/delete")
+end

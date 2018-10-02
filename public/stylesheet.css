@@ -81,6 +81,10 @@ a {
     float: left;
     width: 50%;
   }
+  .column-right{
+    float: right;
+    width: 50%;
+  }
   .center{
     flex: center;
   }
@@ -222,4 +226,3 @@ a {
       border-radius: .25rem;
       border-radius: 10pt;
     }
-  }

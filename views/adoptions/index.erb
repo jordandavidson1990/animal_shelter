@@ -1,15 +1,16 @@
 <div class="container">
-      <h1>Adoptions.</h1>
+
+    <h1>Adoptions.</h1>
 
 
-      <table class="customer-table">
-        <tr>
-          <th>Adoptions Completed</th>
-        </tr>
-        <% for adoption in @adoptions %>
-        <tr>
-          <td><a class="text-align"
-            href="/adoptions/<%= adoption.id %>"><%=
+    <table class="customer-table">
+      <tr>
+        <th>Adoptions Completed</th>
+      </tr>
+      <% for adoption in @adoptions %>
+      <tr>
+        <td><a class="text-align"
+          href="/adoptions/<%= adoption.id %>"><%=
           adoption.owner.name %> adopted <%= adoption.pet.name
           %></a></td>
         </tr>
@@ -18,9 +19,11 @@
       <br>
     </br>
 
+    <div class="column"
 
-      <form method="get" action="/adoptions/new">
-        <input class="btn btn-secondary btn-block" type="submit" value="New Adoption"/>
-      </form>
+    <form method="get" action="/adoptions/new">
+      <input class="btn" type="submit" value="New Adoption"/>
+    </form>
 
-    </div>
+  </div>
+</div>

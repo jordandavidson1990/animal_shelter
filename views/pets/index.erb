@@ -29,22 +29,16 @@
       </table>
       <br>
     </br>
-    </div>
-  </div>
-
-  <div class="row mt-5">
-    <div class="col-sm">
-
-      <form
-      method="get" action="/pets/new">
-
-        <input class="btn btn-secondary btn-block" type="submit" value="Add Pet"/>
-    
-    </form>
   </div>
 </div>
 
+<form
+method="get" action="/pets/new">
 
+<input class="btn btn-secondary btn-block" type="submit" value="Add Pet"/>
+
+</form>
+<br>
 <h2>Search for a Lil Guy.</h2>
 
 <div class="search-container">
@@ -52,16 +46,16 @@
   <div class="single-search">
     <form method="post" action="/pets/search">
 
-        <label for= "breed-select">
-          Find a Breed:</label>
-          <select class="dropdown"
-           name="breed">
-          <% for pet in @distinct_breed %>
-          <option value="<%= pet.breed %>">
-            <%= pet.breed %>
-          </option>
-          <%end%>
-        </select>
+      <label for= "breed-select">
+        Find a Breed:</label>
+        <select class="dropdown"
+        name="breed">
+        <% for pet in @distinct_breed %>
+        <option value="<%= pet.breed %>">
+          <%= pet.breed %>
+        </option>
+        <%end%>
+      </select>
 
       <div class="submit-btn">
         <input class="btn submit-btn" type="submit" value="Breed">
@@ -71,45 +65,45 @@
 
 
 
-    <div class="single-search">
-      <form method="post" action="/pets/type_search">
-          <label for= "type-select">
-            Find a Type:</label>
-            <select class="dropdown"
-             name="type">
-            <% for pet in @distinct_type %>
-            <option value="<%= pet.type %>">
-              <%= pet.type %>
-            </option>
-            <%end%>
-          </select>
-        <div class="submit-btn">
-          <input class="btn submit-btn" type="submit" value="Type">
-        </div>
-      </form>
-    </div>
+  <div class="single-search">
+    <form method="post" action="/pets/type_search">
+      <label for= "type-select">
+        Find a Type:</label>
+        <select class="dropdown"
+        name="type">
+        <% for pet in @distinct_type %>
+        <option value="<%= pet.type %>">
+          <%= pet.type %>
+        </option>
+        <%end%>
+      </select>
+      <div class="submit-btn">
+        <input class="btn submit-btn" type="submit" value="Type">
+      </div>
+    </form>
+  </div>
 
 
 
-    <div class="single-search">
-      <form method="post" action="/pets/status_search">
+  <div class="single-search">
+    <form method="post" action="/pets/status_search">
 
-          <label for= "status-select">
-            Find By Status:</label>
-            <select class="dropdown"
-             name="status">
-            <% for pet in @distinct_status %>
-            <option value="<%= pet.status %>">
-              <%= pet.status %>
-            </option>
-            <%end%>
-          </select>
+      <label for= "status-select">
+        Find By Status:</label>
+        <select class="dropdown"
+        name="status">
+        <% for pet in @distinct_status %>
+        <option value="<%= pet.status %>">
+          <%= pet.status %>
+        </option>
+        <%end%>
+      </select>
 
-        <div class="submit-btn">
-          <input class="btn submit-btn" type="submit" value="Status">
-        </div>
-      </form>
-    </div>
+      <div class="submit-btn">
+        <input class="btn submit-btn" type="submit" value="Status">
+      </div>
+    </form>
+  </div>
 
 </div>
 

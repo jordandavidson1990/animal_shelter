@@ -1,20 +1,26 @@
 <div class="container">
+  <div class="column-right">
+  <img src="http://cdn.akc.org/content/article-body-image/siberian_husky_cute_puppies.jpg"
+  class="img-fluid img-thumbnail" alt="Cute Dog"/>
+  </div>
   <h1>Proud Owner: <%= @owner.name %></h1>
 
-  <h2>Pets:</h2>
+  <h1>Pets:</h1>
 
-  <ul>
+  <h2><ul>
     <% @owner.pets.each do |pet|%>
     <li><%= pet.name%></li>
     <a href="/pets/<%= pet.id %>">
       <% end %>
     </ul>
+    <h2>
 
-    <form method="post" action="/owners/<%= @owner.id %>/delete">
-      <input class="btn btn-secondary btn-block" type="submit" value="Remove Owner"/>
-    </form>
-
+<div class="column">
     <form method="get" action="/owners/<%= @owner.id %>/edit">
-      <input class="btn btn-secondary btn-block" type="submit" value="Edit Owner's Records"/>
+      <input class="btn btn-secondary btn-block" type="submit" value="Edit Owner's Name"/>
     </form>
+
+  <form method="post" action="/owners/<%= @owner.id %>/delete">
+    <input class="btn btn-secondary btn-block" type="submit" value="Remove Owner"/>
+  </form>
   </div>

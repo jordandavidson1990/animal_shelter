@@ -1,53 +1,53 @@
 <div class="container">
+    <h1>Add Little Buddy.</h1>
+    <form method="post" action="/pets">
 
-      <h1>Add Little Buddy.</h1>
-      <form method="post" action="/pets">
+      <div class="form-group">
+        <label for="pet-name">Name:</label>
+        <input class="form-control"
+        id="pet-name" type="text" name="name"/>
+      </div>
 
-        <div class="form-group">
-          <label for="pet-name">Name:</label>
-          <input class="form-control"
-          id="pet-name" type="text" name="name"/>
-        </div>
+      <div class="form-group">
+        <label for="pet-age">Age:</label>
+        <input class="form-control" id="pet-age" type="number" name="age"
+        min="0"/>
+      </div>
 
-        <div class="form-group">
-          <label for="pet-age">Age:</label>
-          <input class="form-control" id="pet-age" type="number" name="age"
-          min="0"/>
-        </div>
+      <div class="form-group">
+        <label for="pet-type">Type:</label>
+        <input class="form-control" id="pet-type" type="text" name="type"/>
+      </div>
 
-        <div class="form-group">
-          <label for="pet-type">Type:</label>
-          <input class="form-control" id="pet-type" type="text" name="type"/>
-        </div>
+      <div class="form-group">
+        <label for="pet-breed">Breed:</label>
+        <input class="form-control" id="pet-breed" type="text" name="breed"/>
+      </div>
 
-        <div class="form-group">
-          <label for="pet-breed">Breed:</label>
-          <input class="form-control" id="pet-breed" type="text" name="breed"/>
-        </div>
+      <div class="form-group">
+        <label for="pet-admission_date">Admission Year:</label>
+        <input class="form-control" id="pet-admission_date" type="number" name="admission_date"
+        min ="1967" max="2018"/>
+      </div>
 
-        <div class="form-group">
-          <label for="pet-admission_date">Admission Year:</label>
-          <input class="form-control" id="pet-admission_date" type="number" name="admission_date"
-          min ="1967" max="2018"/>
-        </div>
+      <div class="form-group">
+        <label for="pet-status">Status:</label>
+        <select class="form-control" id="pet-status" name="status">
+          <option>
+            Looking for a New Home
+          </option>
+          <option>
+            Still in Training
+          </option>
+          <option>
+            Happily Adopted
+          </option>
+        </select>
+      </div>
 
-        <div class="form-group">
-          <label for="pet-status">Status:</label>
-          <select class="form-control" id="pet-status" name="status">
-            <option>
-              Looking for a New Home
-            </option>
-            <option>
-              Still in Training
-            </option>
-            <option>
-              Happily Adopted
-            </option>
-          </select>
-        </div>
 
-        <div class="form-group">
-          <input class="btn btn-secondary btn-block" type="submit" value="Add Pet"/>
-        </div>
-      </form>
+    <div class="form-group">
+      <input class="btn btn-secondary btn-block" type="submit" value="Add Pet"/>
+    </div>
+  </form>
 </div>
