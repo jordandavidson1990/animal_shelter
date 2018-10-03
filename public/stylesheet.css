@@ -92,6 +92,8 @@ a {
     float: right;
     width: 50%;
   }
+  .column-right-arya {
+    float: right;}
   .center{
     flex: center;
   }

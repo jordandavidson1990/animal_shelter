@@ -4,13 +4,12 @@
 
     <div class="container"><h2><%= @adoption.owner.name %> adopted little
     <%= @adoption.pet.name%> in <%= @adoption.year_adopted %></h2></div>
-
+    <div class="column-right-arya">
+      <img src="http://cdn.akc.org/content/article-body-image/border_collie_cute_puppies.jpg"
+      class="img-fluid img-thumbnail" alt="Cute Dog"/></div>
     <br>
   </br>
   <form method="post" action="/adoptions/<%= @adoption.id %>/delete">
     <input class="btn" type="submit" value="Cancel Adoption"/>
   </form>
 </div>
-<div class="column-right">
-  <img src="http://cdn.akc.org/content/article-body-image/border_collie_cute_puppies.jpg"
-  class="img-fluid img-thumbnail" alt="Cute Dog"/>
