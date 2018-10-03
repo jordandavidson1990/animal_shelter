@@ -16,11 +16,11 @@
       <% for pet in @pets %>
       <tr>
         <td><a href="/pets/<%= pet.id %>"><%= pet.name %></a></td>
-        <td><%= pet.age %></td>
-        <td><%= pet.type %></td>
-        <td><%= pet.breed %></td>
-        <td><%= pet.admission_date %></td>
-        <td><%= pet.status%></td>
+        <td><a href="/pets/<%= pet.id %>"><%= pet.age %></td>
+        <td><a href="/pets/<%= pet.id %>"><%= pet.type %></td>
+        <td><a href="/pets/<%= pet.id %>"><%= pet.breed %></td>
+        <td><a href="/pets/<%= pet.id %>"><%= pet.admission_date %></td>
+        <td><a href="/pets/<%= pet.id %>"><%= pet.status%></td>
       </tr>
       <% end %>
     </tbody>
@@ -28,3 +28,7 @@
 </div>
 </div>
 </div>
+<br>
+</br>
+<img class="center-img img-fluid img-thumbnail" src="https://i.ytimg.com/vi/hp5u3IwrlYk/maxresdefault.jpg"
+alt="Kttens on laptop">

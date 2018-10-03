@@ -11,6 +11,12 @@ nav > ul {
     font-weight: bold;
 
 }
+/* nav a {
+  height: 60px;
+  line-height: 60px;
+  color: #204156;
+  text-decoration: none;
+} */
 
 
 li a {
@@ -69,7 +75,8 @@ a {
 
   a:hover,
   a:focus{
-    color: moccasin
+    color: moccasin;
+    cursor: pointer;
   }
   /*
   .flex-container {
@@ -88,6 +95,14 @@ a {
   .center{
     flex: center;
   }
+
+  .center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
   .text-align{
     text-align: center;
   }
@@ -130,7 +145,10 @@ a {
       line-height: 1.5;
       border-radius: .25rem;
       transition: color .15s;
+      cursor: pointer;
     }
+
+    .pointer{cursor: pointer;}
 
     .btn:hover {
       background-color: moccasin;
@@ -182,7 +200,7 @@ a {
       font-size: 1rem;
       line-height: 1.5;
       color: #495057;
-      background-color: #fff;
+      background-color: beige;
       background-clip: padding-box;
       border: 1px solid #ced4da;
       border-radius: .25rem;

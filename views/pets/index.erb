@@ -18,11 +18,11 @@
           <% for pet in @pets %>
           <tr>
             <td><a href="/pets/<%= pet.id %>"><%= pet.name %></a></td>
-            <td><%= pet.age %></td>
-            <td><%= pet.type %></td>
-            <td><%= pet.breed %></td>
-            <td><%= pet.admission_date %></td>
-            <td><%= pet.status%></td>
+            <td><a href="/pets/<%= pet.id %>"><%= pet.age %></td>
+            <td><a href="/pets/<%= pet.id %>"><%= pet.type %></td>
+            <td><a href="/pets/<%= pet.id %>"><%= pet.breed %></td>
+            <td><a href="/pets/<%= pet.id %>"><%= pet.admission_date %></td>
+            <td><a href="/pets/<%= pet.id %>"><%= pet.status%></td>
           </tr>
           <% end %>
         </tbody>
@@ -35,7 +35,7 @@
 <form
 method="get" action="/pets/new">
 
-<input class="btn btn-secondary btn-block" type="submit" value="Add Pet"/>
+<input class="btn" style="text-align: center;"type="submit" value="Add Pet"/>
 
 </form>
 <br>

@@ -1,29 +1,36 @@
 <div class="container">
 
-    <h1>Adoptions.</h1>
-
-
-    <table class="customer-table">
-      <tr>
-        <th>Adoptions Completed</th>
-      </tr>
-      <% for adoption in @adoptions %>
-      <tr>
-        <td><a class="text-align"
-          href="/adoptions/<%= adoption.id %>"><%=
-          adoption.owner.name %> adopted <%= adoption.pet.name
-          %></a></td>
-        </tr>
-        <% end %>
-      </table>
-      <br>
-    </br>
-
-    <div class="column"
-
-    <form method="get" action="/adoptions/new">
-      <input class="btn" type="submit" value="New Adoption"/>
-    </form>
-
+  <div class="column-right">
+    <img style="height: 350pt" src="https://scontent-lhr3-1.xx.fbcdn.net/v/t1.15752-9/43064418_2064341183610025_8109969986627305472_n.jpg?_nc_cat=104&oh=5c10b192c58454a48bec8e1c6f5c1604&oe=5C1E8262"
+    class="img-fluid img-thumbnail"
+    alt="Cute Dog"/>
   </div>
+
+
+
+
+  <h1>Adoptions.</h1>
+
+
+  <table class="customer-table" style="width:49%">
+    <tr>
+      <th>Adoptions Completed</th>
+    </tr>
+    <% for adoption in @adoptions %>
+    <tr>
+      <td><a class="text-align"
+        href="/adoptions/<%= adoption.id %>"><%=
+        adoption.owner.name %> adopted <%= adoption.pet.name
+        %></a></td>
+      </tr>
+      <% end %>
+    </table>
+    <br>
+  </br>
+
+
+  <form method="get" action="/adoptions/new">
+    <input class="btn btn-secondary btn-block" type="submit" value="New Adoption"/>
+  </form>
+
 </div>

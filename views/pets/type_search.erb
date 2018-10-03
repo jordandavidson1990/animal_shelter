@@ -15,17 +15,20 @@
         <tbody>
           <% for pet in @pets %>
           <tr>
-            <td><a href="/pets/<%= pet.id %>">
-              <%= pet.name %></a></td>
-              <td><%= pet.age %></td>
-              <td><%= pet.type %></td>
-              <td><%= pet.breed %></td>
-              <td><%= pet.admission_date %></td>
-              <td><%= pet.status%></td>
-            </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
+            <td><a href="/pets/<%= pet.id %>"><%= pet.name %></a></td>
+            <td><a href="/pets/<%= pet.id %>"><%= pet.age %></td>
+              <td><a href="/pets/<%= pet.id %>"><%= pet.type %></td>
+                <td><a href="/pets/<%= pet.id %>"><%= pet.breed %></td>
+                  <td><a href="/pets/<%= pet.id %>"><%= pet.admission_date %></td>
+                    <td><a href="/pets/<%= pet.id %>"><%= pet.status%></td>
+                    </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <br>
+        </br>
+        <img class="center-img img-fluid img-thumbnail" src="http://static.wixstatic.com/media/7ee089_b7c3b1fb41884d50a1702985eade5fae~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_826,h_550,al_c,q_85,usm_0.66_1.00_0.01/7ee089_b7c3b1fb41884d50a1702985eade5fae~mv2_d_4896_3264_s_4_2.webp"
+        alt="Kttens on laptop">
