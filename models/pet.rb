@@ -87,7 +87,8 @@ class Pet
   end
 
   def update()
-    sql = "UPDATE pets SET (name, age, type, breed, admission_date, status) = ($1, $2, $3, $4, $5, $6) WHERE id = $7"
+    sql = "UPDATE pets SET (name, age, type, breed, admission_date, status) =
+    ($1, $2, $3, $4, $5, $6) WHERE id = $7"
     values = [@name, @age, @type, @breed, @admission_date, @status, @id]
     SqlRunner.run(sql,values)
   end

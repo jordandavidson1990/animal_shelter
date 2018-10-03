@@ -9,6 +9,7 @@ nav > ul {
   background-color: #76818E;
   font-size: 20pt;
     font-weight: bold;
+    font-family: 'Playfair Display', serif
 
 }
 /* nav a {
@@ -52,12 +53,8 @@ li a:hover {
   height: auto;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
+
+h1,h2,h3,h4,h5,h6{
   font-family: 'Playfair Display', serif;
 }
 h1 {
