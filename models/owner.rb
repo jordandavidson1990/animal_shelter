@@ -1,8 +1,7 @@
 require_relative('../db/sql_runner')
-require('pry')
 
 class Owner
-  
+
   attr_accessor :name
   attr_reader :id
 
